@@ -1,13 +1,13 @@
-#PyPriroda
+# PyPriroda
 
 'PyPriroda' is a Python package for quantum chemical program 'PRIRODA', which can be used to create hessian "input" files from optimization "out" files, or optimization "input" files from hessian "out" files.
 
-##Installation
+## Installation
 
 ```
 pip install PyPriroda
 ```
-##Usage
+## Usage
 
 **Here are the main functions that PyPriroda offers:**
 
@@ -25,7 +25,7 @@ name_of_out_optimization_file : string, default= 'name'.
 The name of the optimization file, where the coordinates and the energies come from.
 If 'name', the function takes the name of the optimization file from keybord.
 
-##Examples
+## Examples
 
 ```
 import PyPriroda.CreateFiles as pp
@@ -40,7 +40,7 @@ pp.create_hess('structure2_TS1_steps91-100.out')
 pp.create_hess() #We can use keyboard to write a name of the optimization file
 ```
 
-#License (MIT License)
+# License (MIT License)
 2023 Copyright (c) Alexey Polukhin, Olga Lavrukhina
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
