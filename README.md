@@ -13,7 +13,7 @@ pip install PyPriroda
 
 __create_optim__(_name_of_out_hess_file = 'name'_)
 
-This  function creates a hessian file from an optimization file.
+This  function creates an optimization file from the hess file. The name of out file will be "optim_name_of_out_hess_file.in".
 
 _Parameters:_
 name_of_hess_file : string, default= 'name'. The name of the hessian file, where the coordinates and the energies come from. 
@@ -21,7 +21,7 @@ If 'name', the function takes the name of the hessian file from keybord.
 
 __create_hess__(name_of_out_optimization_file='name')
 
-Function creates hessian from an optimization file.
+Function creates hessian from an optimization file. The name of out file will be "HESS_name_of_out_optimization_file.in".
 
 _Parameters:_
 name_of_out_optimization_file : string, default= 'name'. 
