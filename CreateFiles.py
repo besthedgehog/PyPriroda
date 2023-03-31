@@ -1,8 +1,3 @@
-import os
-
-#path = os.path.join(os.path.dirname(__file__), 'ex.txt')
-pth = os.path.dirname(__file__) #path to directory where we run code
-
 def create_optim(name_of_out_hess_file = 'name'):
     '''
     Function creates a hessian from the optimization file
@@ -38,7 +33,7 @@ def create_optim(name_of_out_hess_file = 'name'):
 
     
     #pth: the directory where we run code
-    with open(os.path.join(pth, name_of_out_hess_file), 'r') as f:
+    with open(name_of_out_hess_file, 'r') as f:
         content = [i.replace('\n', '').replace('eng>', ' ') for i in f.readlines()]
     
     index_of_start_coordinates = 0
@@ -74,7 +69,7 @@ def create_optim(name_of_out_hess_file = 'name'):
     # in the format: optim_name.in
     name_of_final_in_file = 'optim_' + name_of_out_hess_file.replace('.out', '.in')
 
-    with open(os.path.join(pth, name_of_final_in_file), 'w') as f:
+    with open(name_of_final_in_file, 'w') as f:
         f.write(final_text)
 
     print('Name of our input optimization file')
@@ -111,7 +106,7 @@ def create_hess(name_of_out_optimization_file='name'):
 
     #We need to take the atomic coordinates out of the optimization file
     #pth: the directory where we run code
-    with open(os.path.join(pth, name_of_out_optimization_file), 'r') as f:
+    with open(name_of_out_optimization_file, 'r') as f:
         content = [i.replace('\n', '').replace('eng>', ' ') for i in f.readlines()]
     
     index_of_end_of_coordinates = 0
@@ -132,9 +127,8 @@ def create_hess(name_of_out_optimization_file='name'):
 
     name_of_hess_in_file = 'HESS_' + name_of_out_optimization_file.replace('.out', '.in')
 
-    with open(os.path.join(pth, name_of_hess_in_file), 'w') as f:
+    with open(name_of_hess_in_file, 'w') as f:
         f.write(final_text)
 
     print('Name of our input hessian file')
     print(name_of_hess_in_file)
-
