@@ -33,12 +33,12 @@ If 'name', the function takes the name of the optimization file from keybord.
 ```
 import PyPriroda.CreateFiles as pp
 
-pp.create_optim('HESS_structure_2_TS1_step100_new.out)
+pp.create_optim('HESS_H2O2.out)
 #or
 pp.create_optim() #We can use keyboard to write a name of the hess file
 
 
-pp.create_hess('structure2_TS1_steps91-100.out')
+pp.create_hess('optim_H2O2.out')
 #or 
 pp.create_hess() #We can use keyboard to write a name of the optimization file
 ```
