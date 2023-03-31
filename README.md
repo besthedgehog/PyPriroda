@@ -43,6 +43,9 @@ pp.create_hess('optim_H2O2.out')
 pp.create_hess() #We can use keyboard to write a name of the optimization file
 ```
 
+## Testing library
+Simply download files "optim_H2O2.out" and "HESS_H2O2.out" from thisrepository to test this library
+
 # License (MIT License)
 2023 Copyright (c) Alexey Polukhin, Olga Lavrukhina
 
